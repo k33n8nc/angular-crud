@@ -1,0 +1,13 @@
+<div class="shell">
+    <div *ngIf="restaurants$ | async as restaurants" class="container">
+        <mat-card *ngFor="let restaurant of restaurants" class="spacer">
+            <mat-card-content>
+                {{restaurant.attributes.title}}
+                {{restaurant.attributes.description}}
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="container">
+        <button (click)="onNewRestaunt()">Click new</button>
+    </div>
+</div>
