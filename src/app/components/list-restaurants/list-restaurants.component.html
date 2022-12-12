@@ -5,9 +5,12 @@
                 {{restaurant.attributes.title}}
                 {{restaurant.attributes.description}}
             </mat-card-content>
+            <mat-card-footer>
+                <app-edit-restaurant>
+        
+                </app-edit-restaurant>
+            </mat-card-footer>
         </mat-card>
     </div>
-    <div class="container">
-        <button (click)="onNewRestaunt()">Click new</button>
-    </div>
 </div>
+

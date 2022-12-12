@@ -7,16 +7,19 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { RestaurantCardComponent } from './restaurant-card/restaurant-card.component';
+import { ListRestaurantsComponent } from './components/list-restaurants/list-restaurants.component';
+import { EditRestaurantComponent } from './components/edit-restaurant/edit-restaurant.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RestaurantCardComponent
+    ListRestaurantsComponent,
+    EditRestaurantComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,8 @@ import { RestaurantCardComponent } from './restaurant-card/restaurant-card.compo
     MatIconModule,
     MatDatepickerModule,
     MatFormFieldModule,
-    MatCardModule    
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

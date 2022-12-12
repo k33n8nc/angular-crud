@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { catchError, map, Observable, switchMap, tap, throwError } from 'rxjs';
+import { map, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class RestaurantCardService {
+
+export class RestaurantsService {
   private restaurantEndpoint = 'http://localhost:1337/api/restaurants';
 
   restaurants$ = this.http.get<any>(this.restaurantEndpoint)
@@ -19,14 +20,6 @@ export class RestaurantCardService {
           )
         }),
       tap(val => console.log('From Service after map: ', val)),
-      // tap (res => {
-      //   this.restaurants$ = res;
-      // })
     );
-
   constructor(private http: HttpClient) { }
-
-
-
-
 }
