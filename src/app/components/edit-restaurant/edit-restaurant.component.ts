@@ -1,24 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { tap, map } from 'rxjs';
 import { IRestaurant } from 'src/app/models/restaurant';
+import { RestaurantsService } from 'src/app/services/restaurants.service';
 
 @Component({
   selector: 'app-edit-restaurant',
   templateUrl: './edit-restaurant.component.html',
   styleUrls: ['./edit-restaurant.component.scss']
 })
+
 export class EditRestaurantComponent {
-  // restaurants$ = this.restaurantsService.restaurants$
   restaurant: IRestaurant = {data: {title: "This is title", description: "Text here..."}}
 
-  constructor(private http: HttpClient) { }
+  @Input() currentRestaurantId = '0';
+
+  constructor(private restaurantsService: RestaurantsService) {}
   
-  onNewRestaunt(){
-    this.http.post('http://localhost:1337/api/restaurants/', this.restaurant)
-    .subscribe( (res)=> {
-      console.log('Response after subscribe:', res);
-    })
+  deleteRestaurant(){
+    this.restaurantsService.deleteRestaurant(this.currentRestaurantId);
   }
+  
+  // The service Class can be called from outside. 
+  // The service should handle all data interaction
+
 
 }

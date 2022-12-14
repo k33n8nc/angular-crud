@@ -12,8 +12,17 @@ import { IRestaurant } from 'src/app/models/restaurant';
 })
 export class ListRestaurantsComponent {
   restaurants$ = this.restaurantsService.restaurants$
-  restaurant: IRestaurant = {data: {title: "This is title", description: "Text here..."}}
+  // restaurants = [];
+  // restaurant: IRestaurant = {data: {title: "This is title", description: "Text here..."}}
 
   constructor(private restaurantsService: RestaurantsService) { }
 
+  // pushRes(){
+  //   this.restaurants$.subscribe(
+  //     (res) => {
+  //       console.log(res)
+  //       this.restaurants = res;
+  //     }
+  //   )
+  // }
 }

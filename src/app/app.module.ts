@@ -14,12 +14,14 @@ import { AppComponent } from './app.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { ListRestaurantsComponent } from './components/list-restaurants/list-restaurants.component';
 import { EditRestaurantComponent } from './components/edit-restaurant/edit-restaurant.component';
+import { NewRestaurantComponent } from './components/new-restaurant/new-restaurant.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListRestaurantsComponent,
-    EditRestaurantComponent
+    EditRestaurantComponent,
+    NewRestaurantComponent
   ],
   imports: [
     BrowserModule,
