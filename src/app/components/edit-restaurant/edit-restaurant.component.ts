@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { tap, map } from 'rxjs';
+import { tap, map, BehaviorSubject } from 'rxjs';
 import { IRestaurant } from 'src/app/models/restaurant';
 import { RestaurantsService } from 'src/app/services/restaurants.service';
 
@@ -18,7 +18,10 @@ export class EditRestaurantComponent {
   constructor(private restaurantsService: RestaurantsService) {}
   
   deleteRestaurant(){
-    this.restaurantsService.deleteRestaurant(this.currentRestaurantId);
+    this.restaurantsService.deleteRestaurant(this.currentRestaurantId)
+    .subscribe( (res)=> {
+      console.log('Response after deleteRestaurant:', res);
+    })
   }
   
   // The service Class can be called from outside. 

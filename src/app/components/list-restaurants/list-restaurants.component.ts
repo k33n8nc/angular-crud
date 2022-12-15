@@ -11,11 +11,16 @@ import { IRestaurant } from 'src/app/models/restaurant';
   styleUrls: ['./list-restaurants.component.scss']
 })
 export class ListRestaurantsComponent {
-  restaurants$ = this.restaurantsService.restaurants$
+  restaurantsWithAdd$ = this.restaurantsService.restaurantsWithAdd$
+  
   // restaurants = [];
   // restaurant: IRestaurant = {data: {title: "This is title", description: "Text here..."}}
 
   constructor(private restaurantsService: RestaurantsService) { }
+
+  onAddNewRestaurantWithAdd(){
+    this.restaurantsService.addRestaurantWithAdd({id: 999, attributes: {title: 'Title new', description: 'Yeahhhh'}});
+  }
 
   // pushRes(){
   //   this.restaurants$.subscribe(
