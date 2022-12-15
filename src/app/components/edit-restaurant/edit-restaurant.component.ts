@@ -11,7 +11,7 @@ import { RestaurantsService } from 'src/app/services/restaurants.service';
 })
 
 export class EditRestaurantComponent {
-  restaurant: IRestaurant = {id: 999, title: "This is title", category: "Text here..."}
+  restaurant: IRestaurant = {title: "This is title", category: "Text here..."}
 
   @Input() currentRestaurantId = 0;
 

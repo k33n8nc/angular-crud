@@ -9,12 +9,18 @@ import { RestaurantsService } from 'src/app/services/restaurants.service';
 })
 
 export class NewRestaurantComponent {
-  restaurant: IRestaurant = {id:1999, title: "This is title", category: "Text here..."}
-
+  restaurant: IRestaurant = {title: "Restaurant", category: "Italian"}
+  
   constructor(private restaurantsService: RestaurantsService) {}
 
+  getTheDate(){
+    return Date.now();
+  }
+
   addRestaunt(){
-    this.restaurantsService.addRestaurant(this.restaurant);
+    this.restaurantsService.addRestaurant(this.restaurant).subscribe(
+      res => console.log('addRestaurant() after subscribe \n • new-restaurant.component', res)
+    );
   }
  
   // onNewRestaunt(){

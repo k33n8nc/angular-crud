@@ -2,7 +2,7 @@
     <div *ngIf="restaurantsWithAdd$ | async as restaurants" class="container">
         <mat-card *ngFor="let restaurant of restaurants" class="spacer">
             <mat-card-content>
-                {{restaurant.title}}
+                {{restaurant.title}} {{restaurant.id}}
                 {{restaurant.category}}
             </mat-card-content>
             <mat-card-footer>

@@ -1,5 +1,5 @@
 export interface IRestaurant {
-    id: number,
+    // id: number,
     title: string,
     category: string
 }
