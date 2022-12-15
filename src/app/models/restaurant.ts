@@ -1,6 +1,5 @@
 export interface IRestaurant {
-    data: {
-        title: string;
-        description: string;
-    }
+    id: number,
+    title: string,
+    category: string
 }

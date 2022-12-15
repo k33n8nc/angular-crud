@@ -2,9 +2,8 @@
     <div *ngIf="restaurantsWithAdd$ | async as restaurants" class="container">
         <mat-card *ngFor="let restaurant of restaurants" class="spacer">
             <mat-card-content>
-                {{restaurant.attributes.title}}
-                {{restaurant.attributes.description}}
-                <button (click)="onAddNewRestaurantWithAdd()">add</button>
+                {{restaurant.title}}
+                {{restaurant.category}}
             </mat-card-content>
             <mat-card-footer>
                 <app-edit-restaurant [currentRestaurantId]="restaurant.id">

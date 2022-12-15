@@ -1,0 +1,14 @@
+{
+  "restaurants": [
+    {
+      "id": 1,
+      "title": "Restaurant 1",
+      "category": "italian"
+    },
+    {
+      "id": 2,
+      "title": "Restaurant 2",
+      "category": "italian"
+    }
+  ]
+}

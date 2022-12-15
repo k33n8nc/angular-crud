@@ -18,9 +18,7 @@ export class ListRestaurantsComponent {
 
   constructor(private restaurantsService: RestaurantsService) { }
 
-  onAddNewRestaurantWithAdd(){
-    this.restaurantsService.addRestaurantWithAdd({id: 999, attributes: {title: 'Title new', description: 'Yeahhhh'}});
-  }
+
 
   // pushRes(){
   //   this.restaurants$.subscribe(

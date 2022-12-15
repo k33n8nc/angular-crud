@@ -9,7 +9,7 @@ import { RestaurantsService } from 'src/app/services/restaurants.service';
 })
 
 export class NewRestaurantComponent {
-  restaurant: IRestaurant = {data: {title: "This is title", description: "Text here..."}}
+  restaurant: IRestaurant = {id:1999, title: "This is title", category: "Text here..."}
 
   constructor(private restaurantsService: RestaurantsService) {}
 
