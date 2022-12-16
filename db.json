@@ -4,6 +4,16 @@
       "title": "Restaurant",
       "category": "Italian",
       "id": 1
+    },
+    {
+      "title": "Restaurant",
+      "category": "Italian",
+      "id": 2
+    },
+    {
+      "title": "Restaurant",
+      "category": "Italian",
+      "id": 3
     }
   ]
 }

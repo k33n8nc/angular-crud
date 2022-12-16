@@ -20,7 +20,7 @@ export class EditRestaurantComponent {
   deleteRestaurant(){
     this.restaurantsService.deleteRestaurant(this.currentRestaurantId)
     .subscribe( (res)=> {
-      console.log('Response after deleteRestaurant:', res);
+      console.log('Response after deleteRestaurant subscribe:', res);
     })
   }
   
