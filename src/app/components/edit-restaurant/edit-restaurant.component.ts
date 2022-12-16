@@ -18,14 +18,7 @@ export class EditRestaurantComponent {
   constructor(private restaurantsService: RestaurantsService) {}
   
   deleteRestaurant(){
-    this.restaurantsService.deleteRestaurant(this.currentRestaurantId)
-    .subscribe( (res)=> {
-      console.log('Response after deleteRestaurant subscribe:', res);
-    })
+    this.restaurantsService.deleteRestaurant(this.currentRestaurantId).subscribe();
   }
   
-  // The service Class can be called from outside. 
-  // The service should handle all data interaction
-
-
 }

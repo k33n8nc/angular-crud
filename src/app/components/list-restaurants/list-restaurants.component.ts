@@ -1,8 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { RestaurantsService } from '../../services/restaurants.service'; 
-import { HttpClient } from '@angular/common/http';
-import { tap, map } from 'rxjs';
-import { IRestaurant } from 'src/app/models/restaurant';
 
 
 @Component({
@@ -11,21 +8,6 @@ import { IRestaurant } from 'src/app/models/restaurant';
   styleUrls: ['./list-restaurants.component.scss']
 })
 export class ListRestaurantsComponent {
-  restaurantsWithAdd$ = this.restaurantsService.restaurantsWithAdd$
-  
-  // restaurants = [];
-  // restaurant: IRestaurant = {data: {title: "This is title", description: "Text here..."}}
-
+  restaurantsMerged$ = this.restaurantsService.restaurantsMerged$
   constructor(private restaurantsService: RestaurantsService) { }
-
-
-
-  // pushRes(){
-  //   this.restaurants$.subscribe(
-  //     (res) => {
-  //       console.log(res)
-  //       this.restaurants = res;
-  //     }
-  //   )
-  // }
 }

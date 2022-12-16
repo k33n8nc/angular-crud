@@ -1,5 +1,5 @@
 <div class="shell">
-    <div *ngIf="restaurantsWithAdd$ | async as restaurants" class="container">
+    <div *ngIf="restaurantsMerged$ | async as restaurants" class="container">
         <mat-card *ngFor="let restaurant of restaurants" class="spacer">
             <mat-card-content>
                 {{restaurant.title}} {{restaurant.id}}
@@ -12,6 +12,5 @@
             </mat-card-footer>
         </mat-card>
     </div>
-    <!-- <button (click)="pushRes()">Push</button> -->
 </div>
 

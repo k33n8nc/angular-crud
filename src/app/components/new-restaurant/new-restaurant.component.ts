@@ -13,21 +13,8 @@ export class NewRestaurantComponent {
   
   constructor(private restaurantsService: RestaurantsService) {}
 
-  getTheDate(){
-    return Date.now();
-  }
-
   addRestaunt(){
-    this.restaurantsService.addRestaurant(this.restaurant).subscribe(
-      res => console.log('addRestaurant() after subscribe \n • new-restaurant.component', res)
-    );
+    this.restaurantsService.addRestaurant(this.restaurant).subscribe();
   }
- 
-  // onNewRestaunt(){
-  //   this.http.post('http://localhost:1337/api/restaurants/', this.restaurant)
-  //   .subscribe( (res)=> {
-  //     console.log('Response after subscribe 123:', res);
-  //   })
-  // }
 
 }

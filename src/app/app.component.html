@@ -1,23 +1,19 @@
 <mat-toolbar class="toolbar" color="primary">
   <mat-toolbar-row>
     <span>My App {{title}}</span>
-    <button (click)="title = 'Newwwww';">change</button>
+    <button (click)="title = 'Title changed';">change</button>
     <span class="example-spacer"></span>
-    <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"> -->
       <mat-icon>menu</mat-icon>
-    <!-- </button> -->
   </mat-toolbar-row>
 </mat-toolbar>
 
 <div class="container">
-  <p>Component: list-restaurants</p>
     <app-list-restaurants>
 
     </app-list-restaurants>
 </div>
 
 <div class="container">
-  <p>Component: new-restaurant</p>
   <app-new-restaurant>
     
   </app-new-restaurant>
