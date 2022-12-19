@@ -9,8 +9,7 @@ import { RestaurantsService } from './shared/restaurant.service';
 })
 export class RestaurantsComponent implements OnInit {
   restaurants: IRestaurant[] = [];
-  // @Input() restaurants: IRestaurant[] = [];
-  
+
   constructor(private restaurantsService: RestaurantsService) {}
 
   ngOnInit(): void {
@@ -24,15 +23,18 @@ export class RestaurantsComponent implements OnInit {
 
   addRestaurant(restaurant: IRestaurant){
     this.restaurantsService.addRestaurant(restaurant)
-    .subscribe(restaurant => this.restaurants.push(restaurant));
+    .subscribe((restaurant) => {
+      this.restaurants.push(restaurant)
+    });
   }
 
   deleteRestaurant(restaurantId: any){
     this.restaurantsService.deleteRestaurant(restaurantId)
-    .subscribe((res) => {
-      console.log(`In: ${res}`)
-      this.restaurants.filter( (restaurant)=> { restaurant.id == 1 } )
-    });
+    .subscribe(
+      ()=> {
+        this.restaurants = this.restaurants.filter(elem => elem.id != restaurantId)
+      }
+    )
   }
 
 }

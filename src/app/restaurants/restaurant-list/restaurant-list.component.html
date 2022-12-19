@@ -3,14 +3,27 @@
         <mat-card *ngFor="let restaurant of restaurants" class="spacer">
             <mat-card-content>
                 {{restaurant.title}} {{restaurant.id}}
-                {{restaurant.category}}
+                # {{restaurant.category}}
             </mat-card-content>
             <mat-card-footer>
-                <app-restaurant-edit>
-                    
-                </app-restaurant-edit>
+                <div class="container">
+                    <button  mat-mini-fab color="none" aria-label="Example icon button with a menu icon">
+                        <mat-icon (click)="deleteRestaurant(restaurant.id)">delete</mat-icon>
+                    </button>
+                    <button (click)="editRestaurant(restaurant.id)" mat-mini-fab color="none" aria-label="Example icon button with a menu icon">
+                        <mat-icon>edit</mat-icon>
+                    </button>
+                </div>
             </mat-card-footer>
         </mat-card>
     </div>
 </div>
 
+<div class="container" [ngClass]="">
+    <input type="text" #bindTitle placeholder="Title here...">
+    <select name="category" id="cat">
+        <option #bindCategory value="Italian">Italian</option>
+        <option #bindCategory value="Italian">Greek</option>
+        <option #bindCategory value="Italian">Chinese</option>        
+    </select>
+</div>

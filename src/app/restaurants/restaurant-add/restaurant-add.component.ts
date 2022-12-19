@@ -7,7 +7,6 @@ import { IRestaurant } from '../shared/restaurant.model';
   styleUrls: ['./restaurant-add.component.scss']
 })
 export class RestaurantAddComponent {
-  @Input() restaurants: IRestaurant[] = [];
   @Output() newRestaurantEvent = new EventEmitter<any>();
 
   restaurant: IRestaurant = {title: "Restaurant", category: "Italian"}
@@ -15,7 +14,7 @@ export class RestaurantAddComponent {
 
   newRestaurant(value: IRestaurant) {
     this.newRestaurantEvent.emit(value);
-    console.log('clicked', value)
+    console.log('newRestaurant Event emitted ',value)
   }
 
 }

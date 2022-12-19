@@ -1,8 +1,8 @@
 <div class="container">
-    <app-restaurant-add [restaurants]="restaurants" (newRestaurantEvent)="addRestaurant($event)">
+    <app-restaurant-add (newRestaurantEvent)="addRestaurant($event)">
         
     </app-restaurant-add>
-    <app-restaurant-list [restaurants]="restaurants">
+    <app-restaurant-list [restaurants]="restaurants" (delRestaurantEvent)="deleteRestaurant($event)">
         
     </app-restaurant-list>
 </div>
