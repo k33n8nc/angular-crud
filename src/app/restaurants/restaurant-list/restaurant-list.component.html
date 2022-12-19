@@ -1,14 +1,14 @@
 <div class="shell">
-    <div *ngIf="restaurantsMerged$ | async as restaurants" class="container">
+    <div *ngIf="restaurants" class="container">
         <mat-card *ngFor="let restaurant of restaurants" class="spacer">
             <mat-card-content>
                 {{restaurant.title}} {{restaurant.id}}
                 {{restaurant.category}}
             </mat-card-content>
             <mat-card-footer>
-                <app-edit-restaurant [currentRestaurantId]="restaurant.id">
+                <app-restaurant-edit>
                     
-                </app-edit-restaurant>
+                </app-restaurant-edit>
             </mat-card-footer>
         </mat-card>
     </div>

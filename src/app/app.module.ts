@@ -12,16 +12,20 @@ import { MatButtonModule } from '@angular/material/button';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { ListRestaurantsComponent } from './components/list-restaurants/list-restaurants.component';
-import { EditRestaurantComponent } from './components/edit-restaurant/edit-restaurant.component';
-import { NewRestaurantComponent } from './components/new-restaurant/new-restaurant.component';
+import { RestaurantsComponent } from './restaurants/restaurants.component';
+import { RestaurantListComponent } from './restaurants/restaurant-list/restaurant-list.component';
+import { RestaurantComponent } from './restaurants/restaurant/restaurant.component';
+import { RestaurantAddComponent } from './restaurants/restaurant-add/restaurant-add.component';
+import { RestaurantEditComponent } from './restaurants/restaurant-edit/restaurant-edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListRestaurantsComponent,
-    EditRestaurantComponent,
-    NewRestaurantComponent
+    RestaurantsComponent,
+    RestaurantListComponent,
+    RestaurantComponent,
+    RestaurantAddComponent,
+    RestaurantEditComponent
   ],
   imports: [
     BrowserModule,
