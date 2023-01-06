@@ -2,8 +2,7 @@
 
 Angular CLI 14.2.2.
 
-## Dev server
-Run `json-server --watch db.json` to start db
-Run `ng serve` for dev server.
+## json-server and localhost
+Run `json-server --watch db.json` to start db and then run `ng serve` for dev server.
 
 
