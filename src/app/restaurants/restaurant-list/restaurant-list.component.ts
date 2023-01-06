@@ -21,6 +21,9 @@ export class RestaurantListComponent {
   editRestaurant(value: any) {
     this.editRestaurantEvent.emit(value);
     console.log('From editRestaurant Event emitter', value)
+    // this.restaurants.filter( (val)=>{
+    //   console.log(val.id != value) 
+    // } )
   }
 
 }

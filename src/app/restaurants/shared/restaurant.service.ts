@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { map, Observable, tap } from 'rxjs';
 import { IRestaurant } from './restaurant.model';
 
 @Injectable({
@@ -15,6 +15,11 @@ export class RestaurantsService {
     /** GET restaurants from the server */
     getRestaurants(): Observable<IRestaurant[]> {
       return this.http.get<IRestaurant[]>(this.restaurantsUrl)
+      .pipe(
+        tap( (res)=> {
+          console.log('res here', res)
+        } )
+      )
     }
     
     /** POST: a new restaurant to the server */
